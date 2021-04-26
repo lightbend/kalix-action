@@ -25,7 +25,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List Services
-              uses: retgits/akkasls-action:0.0.30
+              uses: retgits/akkasls-action@v1
               with:
                 cmd: "services list"
               env:

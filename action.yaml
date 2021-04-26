@@ -1,0 +1,15 @@
+name: 'akkasls'
+author: 'retgits'
+branding:
+  color: 'orange'
+  icon: zap
+description: 'Runs the Akka Serverless CLI'
+inputs:
+  cmd:
+    description: 'The command to run, without `akkasls`'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cmd }}

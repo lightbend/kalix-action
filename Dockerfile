@@ -13,4 +13,4 @@ RUN apk update &&\
     mv akkasls /bin
 
 ## Set the entry point when the container starts
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

@@ -33,6 +33,14 @@ jobs:
                 project: ${{ secrets.PROJECT }}
 ```
 
+## Contributing
+
+We welcome all contributions! [Pull requests](https://github.com/lightbend-labs/akkasls-action/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend-labs/akkasls-action/issues) first to discuss what you would like to change.
+
+## Support
+
+This project is an [incubator](https://developer.lightbend.com/docs/introduction/getting-help/support-terminology.html)
+
 ## License
 
 See the [LICENSE](./LICENSE)

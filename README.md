@@ -1,6 +1,6 @@
 # Akka Serverless CLI for GitHub Actions
 
-This action provides a wrapper for the [Akka Serverless CLI](https://developer.lightbend.com/docs/akka-serverless/getting-started/set-up-development-env.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://developer.lightbend.com/docs/akka-serverless/deploying/integrate-cicd.html) first.
+This action provides a wrapper for the [Akka Serverless CLI](https://developer.lightbend.com/docs/akka-serverless/getting-started/set-up-development-env.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://developer.lightbend.com/docs/akka-serverless/projects/integrate-cicd.html) first.
 
 ## Usage
 
@@ -25,7 +25,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List Services
-              uses: lightbend-labs/akkasls-action@v2
+              uses: lightbend/akkasls-action@v2
               with:
                 cmd: "services list"
               env:
@@ -35,7 +35,7 @@ jobs:
 
 ## Contributing
 
-We welcome all contributions! [Pull requests](https://github.com/lightbend-labs/akkasls-action/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend-labs/akkasls-action/issues) first to discuss what you would like to change.
+We welcome all contributions! [Pull requests](https://github.com/lightbend/akkasls-action/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend/akkasls-action/issues) first to discuss what you would like to change.
 
 ## Support
 

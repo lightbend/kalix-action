@@ -8,7 +8,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN apk update &&\
     apk add curl &&\
     rm -rf /var/lib/apt/lists/* &&\
-    curl -OL https://downloads.akkaserverless.com/stable/akkasls_linux_amd64.tar.gz &&\
+    curl -OL https://downloads.akkaserverless.com/latest/akkasls_linux_amd64.tar.gz &&\
     tar xzf akkasls_linux_amd64.tar.gz &&\
     mv akkasls /bin
 

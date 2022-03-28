@@ -4,13 +4,13 @@ FROM alpine:3.13
 ## Copy the entrypoint
 COPY entrypoint.sh /entrypoint.sh
 
-## Install cURL and akkasls
+## Install cURL and kalix
 RUN apk update &&\
     apk add curl &&\
     rm -rf /var/lib/apt/lists/* &&\
-    curl -OL https://downloads.akkaserverless.com/latest/akkasls_linux_amd64.tar.gz &&\
-    tar xzf akkasls_linux_amd64.tar.gz &&\
-    mv akkasls /bin
+    curl -OL https://downloads.kalix.com/latest/kalix_linux_amd64.tar.gz &&\
+    tar xzf kalix_linux_amd64.tar.gz &&\
+    mv kalix /bin
 
 ## Set the entry point when the container starts
 ENTRYPOINT ["/entrypoint.sh"]

@@ -1,20 +1,20 @@
-# Akka Serverless CLI for GitHub Actions
+# Kalix CLI for GitHub Actions
 
-This action provides a wrapper for the [Akka Serverless CLI](https://developer.lightbend.com/docs/akka-serverless/getting-started/set-up-development-env.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://developer.lightbend.com/docs/akka-serverless/projects/integrate-cicd.html) first.
+This action provides a wrapper for the [Kalix CLI](https://developer.lightbend.com/docs/kalix/getting-started/set-up-development-env.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://developer.lightbend.com/docs/kalix/projects/integrate-cicd.html) first.
 
 ## Usage
 
 The action takes two required variables to authenticate and set the project you want to work on correctly:
 
-* `token`: The Akka Serverless authentication token
-* `project`: The project ID for the Akka Serverless project you're using
+* `token`: The Kalix authentication token
+* `project`: The project ID for the Kalix project you're using
 
 ## Example Workflow
 
 The below flow shows how to use this action to list all services in your project
 
 ```yaml
-name: akkasls
+name: kalix
 
 on: 
   push:
@@ -25,7 +25,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List Services
-              uses: lightbend/akkasls-action@v2
+              uses: lightbend/kalix-action@v2
               with:
                 cmd: "services list"
               env:
@@ -35,7 +35,7 @@ jobs:
 
 ## Contributing
 
-We welcome all contributions! [Pull requests](https://github.com/lightbend/akkasls-action/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend/akkasls-action/issues) first to discuss what you would like to change.
+We welcome all contributions! [Pull requests](https://github.com/lightbend/kalix-action/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend/kalix-action/issues) first to discuss what you would like to change.
 
 ## Support
 

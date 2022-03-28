@@ -1,12 +1,12 @@
-name: 'akkasls'
+name: 'kalix'
 author: 'retgits'
 branding:
   color: 'orange'
   icon: zap
-description: 'Runs the Akka Serverless CLI'
+description: 'Runs the Kalix CLI'
 inputs:
   cmd:
-    description: 'The command to run, without `akkasls`'
+    description: 'The command to run, without `kalix`'
     required: true
 runs:
   using: 'docker'

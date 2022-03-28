@@ -3,13 +3,13 @@
 set -e
 
 ## Set the refresh token and project ID
-sh -c "akkasls config set refresh-token $token"
-sh -c "akkasls config set project $project"
+sh -c "kalix config set refresh-token $token"
+sh -c "kalix config set project $project"
 
 ## Run the commands
 for cmd in "$@"; do
     echo "Running: '$cmd'"
-    if sh -c "akkasls $cmd"; then
+    if sh -c "kalix $cmd"; then
         echo "Success!"
     else
         exit_code=$?

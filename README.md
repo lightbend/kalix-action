@@ -1,6 +1,6 @@
 # Kalix CLI for GitHub Actions
 
-This action provides a wrapper for the [Kalix CLI](https://developer.lightbend.com/docs/kalix/getting-started/set-up-development-env.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://developer.lightbend.com/docs/kalix/projects/integrate-cicd.html) first.
+This action provides a wrapper for the [Kalix CLI](https://docs.kalix.io/kalix/index.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://docs.kalix.io/projects/integrate-cicd-github-actions.html) first.
 
 ## Usage
 

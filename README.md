@@ -25,7 +25,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List Services
-              uses: lightbend/kalix-action@v3
+              uses: lightbend/kalix-action@v4
               with:
                 cmd: "services list"
               env:

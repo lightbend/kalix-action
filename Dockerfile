@@ -8,7 +8,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN apk update &&\
     apk add curl &&\
     rm -rf /var/lib/apt/lists/* &&\
-    wget https://downloads.kalix.io/latest/kalix_linux_amd64.tar.gz &&\
+    wget https://downloads.kalix.io/2.0.19/kalix_linux_amd64.tar.gz &&\
     tar xzf kalix_linux_amd64.tar.gz &&\
     mv kalix /bin
 

@@ -8,7 +8,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN apk update &&\
     apk add curl &&\
     rm -rf /var/lib/apt/lists/* &&\
-    VERSION="2.0.32" &&\
+    VERSION="2.0.33" &&\
     wget https://downloads.kalix.io/${VERSION}/kalix_linux_amd64_${VERSION}.tar.gz &&\
     tar xzf kalix_linux_amd64_${VERSION}.tar.gz &&\
     mv kalix /bin

@@ -22,7 +22,7 @@ jobs:
       - name: Script
         run: |
           CLI_VERSION=$(kalix version)
-          sed -i.bak "s/VERSION=\"\(.*\)\"/VERSION=\"${CLI_VERSION}\"/" Dockerfile
+          sed -i "s/VERSION=\"\(.*\)\"/VERSION=\"${CLI_VERSION}\"/" Dockerfile
 
       - name: Create Pull Request
         # https://github.com/peter-evans/create-pull-request/releases

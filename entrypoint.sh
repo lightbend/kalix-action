@@ -3,8 +3,8 @@
 set -e
 
 ## Set the refresh token and project ID
-sh -c "kalix config set refresh-token $token"
-sh -c "kalix config set project $project"
+sh -c "kalix config set refresh-token ${token}"
+sh -c "kalix config set project ${project}"
 
 ## Run the commands
 for cmd in "$@"; do

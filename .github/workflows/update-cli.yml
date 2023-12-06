@@ -1,0 +1,39 @@
+name: Update Kalix CLI version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-cli-version:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        # https://github.com/actions/checkout/releases
+        # v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+
+      - name: Install Kalix
+        run: |
+          export KALIX_INSTALL_PATH=$HOME/.kalix/bin
+          mkdir -p $KALIX_INSTALL_PATH
+          curl -sL https://docs.kalix.io/install-cli.sh | bash -s -- -y -P $KALIX_INSTALL_PATH
+          echo $KALIX_INSTALL_PATH >> $GITHUB_PATH
+
+      - name: Script
+        run: |
+          CLI_VERSION=$(kalix version)
+          sed -i.bak "s/VERSION=\"\(.*\)\"/VERSION=\"${CLI_VERSION}\"/" Dockerfile
+
+      - name: Create Pull Request
+        # https://github.com/peter-evans/create-pull-request/releases
+        # v5.0.2
+        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38
+        with:
+          title: Update CLI version
+          branch-suffix: short-commit-hash
+          body: |
+            See https://github.com/lightbend/kalix/issues?q=is%3Aissue+label%3Acli++%22Release+the+Kalix+CLI%22
+          delete-branch: true
+          labels: cli, kalix-services
+          commit-message: "update kalix CLI version"
+          author: "GitHub <noreply@github.com>"

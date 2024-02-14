@@ -1,6 +1,6 @@
 # Kalix CLI for GitHub Actions
 
-This action provides a wrapper for the [Kalix CLI](https://docs.kalix.io/kalix/index.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://docs.kalix.io/reference/kalix/kalix_auth_tokens_create.html) first.
+This action provides a wrapper for the [Kalix CLI](https://docs.kalix.io/kalix/index.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://docs.kalix.io/operations/integrate-cicd-github-actions.html) first.
 
 ## Usage
 

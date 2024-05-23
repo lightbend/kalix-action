@@ -1,5 +1,9 @@
 # Kalix CLI for GitHub Actions
 
+## *This action has been superseded by the [setup-kalix-action](https://github.com/lightbend/setup-kalix-action) which installs the Kalix CLI for use in the GitHub workflow.*
+
+**This action will not see further updates.**
+
 This action provides a wrapper for the [Kalix CLI](https://docs.kalix.io/kalix/index.html). The action executes whatever commands you specify, and requires you've created an [authentication token](https://docs.kalix.io/operations/integrate-cicd-github-actions.html) first.
 
 ## Usage
@@ -39,7 +43,7 @@ We welcome all contributions! [Pull requests](https://github.com/lightbend/kalix
 
 ## Support
 
-This project is an [incubator](https://developer.lightbend.com/docs/introduction/getting-help/support-terminology.html)
+This project is an [end-of-life](https://doc.akka.io/docs/akka-dependencies/current/support-terminology.html#end-of-life-eol-)
 
 ## License
 
